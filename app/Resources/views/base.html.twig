@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% stylesheets 
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+        {% javascripts
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+            'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+</body>
+</html>

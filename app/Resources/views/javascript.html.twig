@@ -1,0 +1,9 @@
+{# empty Twig template #}
+{% block my_javascripts %}
+    {% javascripts
+
+        filter='?uglifyjs2'
+    %}
+    {# <script src="{{ asset_url }}" type="text/javascript"></script> #}
+    {% endjavascripts %}
+{% endblock %}
