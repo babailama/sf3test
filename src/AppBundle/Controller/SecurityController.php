@@ -36,8 +36,7 @@ class SecurityController extends Controller {
         ob_start();
 
         // here DB request or some processing
-        $codeText = 'DEMO - ' . '*******   // we need to be sure ours script does not output anything!!!
-        // otherwise it will break up PNG binary!';
+        $codeText = date('l jS \of F Y h:i:s A');
 
         // end of processing here
         $debugLog = ob_get_contents();
